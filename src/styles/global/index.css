@@ -1,0 +1,18 @@
+/* This colorh should be extract from palete ts, but i dont how*/
+:root {
+  --color-background: #232323;
+  --color-button-text: #AAA;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-button-text);
+}
+body {
+  background-color: var(--color-background);
+  display: flex;
+  height: 100vh;
+}
