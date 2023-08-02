@@ -1,19 +1,12 @@
 import Anchor from '@/components/atomic/atoms/anchor'
 import Avatar from '@/components/atomic/atoms/avatar'
-import Button from '@/components/atomic/atoms/button'
-import IconButton from '@/components/atomic/atoms/buttonicon'
 import Typography from '@/components/atomic/atoms/typography'
 import Carousel from '@/components/atomic/molecules/carrusel/Carrusel'
 import { DescriptionProject } from '@/components/atomic/molecules/descriptonproject/descpro'
-import { FaBeer } from 'react-icons/fa'
 
+import Card from '@/components/atomic/layouts/card'
+import BannerProject from '@/components/atomic/organisms/bannerProject'
 export default function Home() {
-  const images = [
-    'https://images.unsplash.com/11/converse-fields.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1677&q=80',
-    'https://images.unsplash.com/11/sky-rose.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    'https://images.unsplash.com/12/till-the-cows-come-home.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-  ]
-
   return (
     <>
       <article
@@ -98,21 +91,7 @@ export default function Home() {
           width: '100vw',
         }}
       >
-        <div
-          style={{
-            padding: 100,
-            display: 'flex',
-            flexDirection:'column',
-            gap: 32,
-            width: 1024,
-          }}
-        >
-          <Carousel images={images} />
-
-          <DescriptionProject />
- 
-
-        </div>
+        <BannerProject />
       </article>
     </>
   )

@@ -15,4 +15,14 @@ export const DescProjStyle = styled.div`
     margin-bottom: ${({theme }) => theme.spacing.x4};
   }
 
+  .buttonPlace{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding:  ${({theme }) => theme.spacing.x3};
+    div {
+      width: 200px;
+    }
+  }
+
 `
