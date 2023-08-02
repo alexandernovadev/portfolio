@@ -2,12 +2,12 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { IconType } from 'react-icons'
 
-import { FaBeer } from 'react-icons/fa' 
+import { FaBeer } from 'react-icons/fa'
 
 export const IconDefault = () => <IconButton icon={FaBeer} />
 
 interface IconButtonProps {
-  icon: IconType
+  icon?: IconType
   variant?: 'default' | 'disabled' | 'filled'
   size?: 'small' | 'medium' | 'large'
   onClick?: () => void
@@ -17,6 +17,7 @@ interface IconButtonProps {
 const IconButtonStyled = styled.button<IconButtonProps>`
   display: flex;
   justify-content: center;
+  z-index: 1;
   align-items: center;
   border-radius: 50%;
   width: ${({ size }) =>
@@ -80,7 +81,6 @@ const IconButton = ({
   onClick,
 }: IconButtonProps) => {
   return (
-    // @ts-ignore
     <IconButtonStyled variant={variant} size={size} onClick={onClick}>
       {Icon ? <Icon /> : <IconDefault />}
     </IconButtonStyled>
