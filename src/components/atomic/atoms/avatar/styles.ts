@@ -13,7 +13,8 @@ export const AvatarStyled = styled.img<Partial<AvatarProps>>`
   border-radius: 50%;
   object-fit: cover;
 
-  background: ${({ theme }) => theme.colors.highlight};
+  background: ${({ theme, background }) =>
+    background ? background : theme.colors.highlight};
   box-shadow: inset 4px 4px 5px ${({ theme }) => theme.colors.shadowLight},
     inset -4px -4px 5px ${({ theme }) => theme.colors.shadowDark};
   transform: scale(1.08);

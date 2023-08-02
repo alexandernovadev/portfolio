@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useSpring } from '@react-spring/web'
 import { ButtonContainer, CarruselStyle } from './Carrusel.style'
-import { Image } from '../../image/Image'
+import { Image } from '@/components/atomic/atoms/image/Image'
 import IconButton from '../../atoms/buttonicon'
 
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from 'react-icons/fa'

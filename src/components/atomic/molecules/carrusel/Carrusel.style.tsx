@@ -4,7 +4,7 @@ import { CarruselProps } from './carrusel.type'
 export const CarruselStyle = styled.div`
   position: relative;
   height: 400px;
-  width: 600px;
+  width: 100%;
   overflow: hidden;
 `
 

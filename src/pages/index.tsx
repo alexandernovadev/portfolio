@@ -4,6 +4,7 @@ import Button from '@/components/atomic/atoms/button'
 import IconButton from '@/components/atomic/atoms/buttonicon'
 import Typography from '@/components/atomic/atoms/typography'
 import Carousel from '@/components/atomic/molecules/carrusel/Carrusel'
+import { DescriptionProject } from '@/components/atomic/molecules/descriptonproject/descpro'
 import { FaBeer } from 'react-icons/fa'
 
 export default function Home() {
@@ -108,11 +109,8 @@ export default function Home() {
         >
           <Carousel images={images} />
 
-          <div>
-            <h1>Hola</h1>
-            <p>Como estas </p>
-          </div>
-
+          <DescriptionProject />
+ 
 
         </div>
       </article>
