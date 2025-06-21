@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "@fontsource/orbitron/400.css";
+@import "@fontsource/orbitron/700.css";
+@import "@fontsource/orbitron/900.css";
+
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+@layer base {
+  :root {
+    --background: 0 0% 5.1%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 5.1%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5.1%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 5.1%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  /* Neon text effects - más suaves */
+  .neon-text-lime {
+    color: #7c3aed;
+    text-shadow: 0 0 4px #7c3aed, 0 0 8px #7c3aed;
+  }
+
+  .neon-text-cyan {
+    color: #06b6d4;
+    text-shadow: 0 0 4px #06b6d4, 0 0 8px #06b6d4;
+  }
+
+  .neon-text-pink {
+    color: #ec4899;
+    text-shadow: 0 0 4px #ec4899, 0 0 8px #ec4899;
+  }
+
+  /* Neon button effects */
+  .neon-button-lime {
+    @apply bg-transparent border-2 text-violet-400 hover:bg-violet-400 hover:text-black transition-all duration-300 rounded-xl;
+    border-color: #7c3aed;
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.4);
+  }
+
+  .neon-button-lime:hover {
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.6), inset 0 0 15px rgba(124, 58, 237, 0.3);
+  }
+
+  .neon-button-cyan {
+    @apply bg-transparent border-2 text-cyan-400 hover:bg-cyan-400 hover:text-black transition-all duration-300 rounded-xl;
+    border-color: #06b6d4;
+    box-shadow: 0 0 8px rgba(6, 182, 212, 0.4);
+  }
+
+  .neon-button-cyan:hover {
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.6), inset 0 0 15px rgba(6, 182, 212, 0.3);
+  }
+
+  .neon-button-pink {
+    @apply bg-transparent border-2 text-pink-400 hover:bg-pink-400 hover:text-black transition-all duration-300 rounded-xl;
+    border-color: #ec4899;
+    box-shadow: 0 0 8px rgba(236, 72, 153, 0.4);
+  }
+
+  .neon-button-pink:hover {
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.6), inset 0 0 15px rgba(236, 72, 153, 0.3);
+  }
+
+  /* Neon card effects con más border radius */
+  .neon-card {
+    @apply bg-gray-900/50 border border-gray-700 backdrop-blur-sm transition-all duration-300 rounded-2xl;
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.1);
+  }
+
+  .neon-card:hover {
+    border-color: #7c3aed;
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
+  }
+
+  .neon-card-lime {
+    @apply bg-gray-900/50 border border-gray-700 backdrop-blur-sm transition-all duration-300 rounded-2xl;
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.1);
+  }
+
+  .neon-card-lime:hover {
+    border-color: #7c3aed;
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
+  }
+
+  .neon-card-cyan {
+    @apply bg-gray-900/50 border border-gray-700 backdrop-blur-sm transition-all duration-300 rounded-2xl;
+    box-shadow: 0 0 8px rgba(6, 182, 212, 0.1);
+  }
+
+  .neon-card-cyan:hover {
+    border-color: #06b6d4;
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+  }
+
+  .neon-card-pink {
+    @apply bg-gray-900/50 border border-gray-700 backdrop-blur-sm transition-all duration-300 rounded-2xl;
+    box-shadow: 0 0 8px rgba(236, 72, 153, 0.1);
+  }
+
+  .neon-card-pink:hover {
+    border-color: #ec4899;
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
+  }
+
+  /* Tech card hover effect */
+  .tech-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+
+  /* Project card hover effect */
+  .project-card:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+  }
+
+  /* Neon input effects con más border radius */
+  .neon-input {
+    @apply bg-gray-900/50 border-gray-700 text-white placeholder-gray-400 focus:border-violet-400 transition-all duration-300 rounded-xl;
+    box-shadow: 0 0 5px rgba(124, 58, 237, 0.1);
+  }
+
+  .neon-input:focus {
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.3);
+  }
+
+  /* Neon glow effects */
+  .neon-glow-lime {
+    box-shadow: 0 0 15px #7c3aed;
+  }
+
+  .neon-glow-cyan {
+    box-shadow: 0 0 15px #06b6d4;
+  }
+
+  .neon-glow-pink {
+    box-shadow: 0 0 15px #ec4899;
+  }
+
+  /* Grid background */
+  .grid-background {
+    background-image: linear-gradient(rgba(124, 58, 237, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124, 58, 237, 0.08) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: grid-move 20s linear infinite;
+  }
+
+  @keyframes grid-move {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(50px, 50px);
+    }
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #7c3aed, #06b6d4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #06b6d4, #ec4899);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(124, 58, 237, 0.3);
+  color: white;
+}
