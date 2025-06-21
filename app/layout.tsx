@@ -5,9 +5,23 @@ import { Inter } from "next/font/google"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  metadataBase: new URL('https://alexandernova.pro'),
+  title: 'Alexander Nova - React Engineer & Software Architect',
+  description: 'Personal portfolio of Alexander Nova, a React Engineer and Software Architect with expertise in modern web development, cloud technologies, and scalable applications.',
+  keywords: ['React', 'Node.js', 'TypeScript', 'Software Engineer', 'Full Stack Developer', 'Portfolio'],
+  authors: [{ name: 'Alexander Nova' }],
+  creator: 'Alexander Nova',
+  openGraph: {
+    title: 'Alexander Nova - React Engineer & Software Architect',
+    description: 'Personal portfolio showcasing modern web development projects and professional experience.',
+    type: 'website',
+    images: ['/logonovaDesing.png'],
+  },
+  icons: {
+    icon: '/logonovaDesing.png',
+    shortcut: '/logonovaDesing.png',
+    apple: '/logonovaDesing.png',
+  },
 }
 
 export default function RootLayout({
