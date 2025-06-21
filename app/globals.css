@@ -239,3 +239,38 @@ html {
   background: rgba(124, 58, 237, 0.3);
   color: white;
 }
+
+/* New Tech Tabs UI */
+.tech-tabs-list {
+  @apply inline-flex h-auto items-center justify-center rounded-full bg-gray-900/70 p-1.5 backdrop-blur-sm;
+  box-shadow: 0 0 25px rgba(125, 211, 252, 0.1), 0 0 10px rgba(249, 168, 212, 0.1);
+}
+
+.tech-tab-trigger {
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-full px-6 py-2 text-base font-semibold text-gray-400 transition-all focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50;
+  @apply hover:text-white;
+}
+
+.tech-tab-trigger[data-state="active"] {
+  @apply text-black shadow-lg;
+}
+
+.tech-tab-trigger[data-value="frontend"][data-state="active"] {
+  background-color: #a78bfa; /* lighter violet */
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.7), inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.tech-tab-trigger[data-value="backend"][data-state="active"] {
+  background-color: #7dd3fc; /* lighter cyan */
+  box-shadow: 0 0 20px rgba(125, 211, 252, 0.7), inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.tech-tab-trigger[data-value="devops"][data-state="active"] {
+  background-color: #f9a8d4; /* lighter pink */
+  box-shadow: 0 0 20px rgba(249, 168, 212, 0.7), inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.tech-tab-trigger[data-value="testing"][data-state="active"] {
+  background-color: #a78bfa; /* lighter violet */
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.7), inset 0 0 5px rgba(255, 255, 255, 0.5);
+}

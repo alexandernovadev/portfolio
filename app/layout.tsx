@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { Inter } from "next/font/google"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: 'v0 App',
@@ -14,7 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+      </head>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
