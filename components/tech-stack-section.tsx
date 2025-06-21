@@ -23,7 +23,7 @@ export default function TechStackSection() {
   }
 
   return (
-    <Section title="Tech Stack" titleClassName="neon-text-pink">
+    <Section id="tech-stack" title="Tech Stack" titleClassName="neon-text-pink">
       <Tabs defaultValue="frontend" className="w-full flex flex-col items-center">
         <TabsList className="tech-tabs-list">
           <TabsTrigger value="frontend" className="tech-tab-trigger">

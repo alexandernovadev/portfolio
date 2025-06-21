@@ -7,7 +7,7 @@ import Image from "next/image"
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative px-4">
+    <section id="home" className="min-h-screen flex items-center justify-center relative px-4">
       <div className="text-center max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.8 }}
@@ -18,11 +18,11 @@ export default function HeroSection() {
           <div className="relative inline-block">
             <div className="logo-glow"></div>
             <Image
-              src="/logonovaDesing.png"
-              alt="Alexander Nova Logo"
-              width={80}
-              height={80}
-              className="rounded-full hero-logo relative z-10"
+              src="/myselft.webp"
+              alt="Alexander Nova"
+              width={180}
+              height={180}
+              className="rounded-full profile-image-bw relative z-10 object-cover aspect-square"
               priority
             />
           </div>

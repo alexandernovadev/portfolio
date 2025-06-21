@@ -204,6 +204,34 @@
     transform: scale(1.05);
   }
 
+  /* Profile image specific styles */
+  .profile-image {
+    filter: brightness(110%) contrast(125%) saturate(110%) drop-shadow(0 0 10px rgba(124, 58, 237, 0.6));
+    transition: all 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1 / 1;
+  }
+
+  .profile-image:hover {
+    filter: brightness(120%) contrast(130%) saturate(120%) drop-shadow(0 0 20px rgba(124, 58, 237, 0.8));
+    transform: scale(1.05);
+  }
+
+  /* Black and white profile image */
+  .profile-image-bw {
+    filter: grayscale(100%) contrast(120%) brightness(110%) drop-shadow(0 0 10px rgba(124, 58, 237, 0.6));
+    transition: all 0.3s ease;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1 / 1;
+  }
+
+  .profile-image-bw:hover {
+    filter: grayscale(100%) contrast(130%) brightness(120%) drop-shadow(0 0 20px rgba(124, 58, 237, 0.8));
+    transform: scale(1.05);
+  }
+
   .logo-glow {
     position: absolute;
     inset: -8px;
@@ -303,4 +331,29 @@ html {
 .tech-tab-trigger[data-value="testing"][data-state="active"] {
   background-color: #a78bfa; /* lighter violet */
   box-shadow: 0 0 20px rgba(167, 139, 250, 0.7), inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Project Tabs UI */
+.project-tabs-list {
+  @apply inline-flex h-auto items-center justify-center rounded-full bg-gray-900/70 p-1.5 backdrop-blur-sm;
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.1), 0 0 10px rgba(236, 72, 153, 0.1);
+}
+
+.project-tab-trigger {
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-full px-6 py-2 text-base font-semibold text-gray-400 transition-all focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50;
+  @apply hover:text-white;
+}
+
+.project-tab-trigger[data-state="active"] {
+  @apply text-black shadow-lg;
+}
+
+.project-tab-trigger[data-value="landing"][data-state="active"] {
+  background-color: #06b6d4; /* cyan */
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.7), inset 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.project-tab-trigger[data-value="webapp"][data-state="active"] {
+  background-color: #ec4899; /* pink */
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.7), inset 0 0 5px rgba(255, 255, 255, 0.5);
 }

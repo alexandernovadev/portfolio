@@ -47,4 +47,61 @@ export const projects = [
     github: "#",
     demo: "#",
   },
+  // Landing Pages
+  {
+    title: "Tech Startup Landing",
+    description:
+      "Modern landing page for a tech startup with animated sections, testimonials, and lead capture forms. Optimized for conversions.",
+    techs: ["Next.js", "Framer Motion", "Tailwind", "TypeScript"],
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "Restaurant Website",
+    description:
+      "Elegant restaurant website with menu showcase, online reservations, and beautiful food photography. Mobile-first design.",
+    techs: ["React", "CSS3", "JavaScript", "Responsive"],
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "Fitness Studio Landing",
+    description:
+      "Dynamic fitness studio website with class schedules, trainer profiles, and membership signup. High-energy design with video backgrounds.",
+    techs: ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "Real Estate Portfolio",
+    description:
+      "Professional real estate portfolio showcasing luxury properties with virtual tours, property filters, and contact forms.",
+    techs: ["Vue.js", "Three.js", "SCSS", "Firebase"],
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "Creative Agency Landing",
+    description:
+      "Bold and creative agency website with portfolio showcase, client testimonials, and interactive animations. Stands out from the crowd.",
+    techs: ["React", "Framer Motion", "Stitches", "Figma"],
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "E-Learning Platform Landing",
+    description:
+      "Educational platform landing page with course previews, instructor profiles, and student testimonials. Focused on enrollment conversion.",
+    techs: ["Next.js", "Tailwind", "TypeScript", "Stripe"],
+    github: "#",
+    demo: "#",
+  },
+  {
+    title: "SaaS Product Landing",
+    description:
+      "Professional SaaS landing page with feature highlights, pricing tables, and integration showcase. Optimized for trial signups.",
+    techs: ["React", "Styled Components", "AOS", "Analytics"],
+    github: "#",
+    demo: "#",
+  },
 ] 

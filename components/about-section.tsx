@@ -21,7 +21,7 @@ export default function AboutSection() {
   }
 
   return (
-    <section className="py-20 px-4 max-w-7xl mx-auto">
+    <section id="about" className="py-20 px-4 max-w-7xl mx-auto">
       <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
         <motion.h2
           variants={itemVariants}

@@ -5,15 +5,16 @@ import { cn } from "@/lib/utils"
 import type { ReactNode } from "react"
 
 interface SectionProps {
+  id?: string
   title: string
   titleClassName?: string
   children: ReactNode
   className?: string
 }
 
-export function Section({ title, titleClassName, children, className }: SectionProps) {
+export function Section({ id, title, titleClassName, children, className }: SectionProps) {
   return (
-    <section className={cn("py-20", className)}>
+    <section id={id} className={cn("py-20", className)}>
       <motion.h2
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

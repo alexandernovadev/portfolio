@@ -10,18 +10,20 @@ import ContactSection from "@/components/contact-section"
 import AnimatedBackground from "@/components/animated-background"
 import CursorGlow from "@/components/cursor-glow"
 import Footer from "@/components/footer"
+import Navigation from "@/components/navigation"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white relative overflow-x-hidden">
       <AnimatedBackground />
       <CursorGlow />
+      <Navigation />
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative z-10"
+        className="relative z-10 pt-16"
       >
         <HeroSection />
         <div className="perro max-w-screen-lg mx-auto px-4">

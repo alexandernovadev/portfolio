@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Linkedin } from "lucide-react"
+import { Mail, Linkedin, BookOpen } from "lucide-react"
 import { Section } from "@/components/layout/section"
 
 export default function ContactSection() {
   return (
-    <Section title="Get In Touch" titleClassName="neon-text-pink">
+    <Section id="contact" title="Get In Touch" titleClassName="neon-text-pink">
       <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -49,6 +49,21 @@ export default function ContactSection() {
                       className="text-pink-400 hover:text-pink-300 transition-colors"
                     >
                       /in/alexanderdevmern
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <BookOpen className="h-6 w-6 text-violet-400 mr-4" />
+                  <div>
+                    <p className="font-semibold text-white">Blog</p>
+                    <a
+                      href="https://blog.alexandernova.pro"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-violet-400 hover:text-violet-300 transition-colors"
+                    >
+                      Read my thoughts on tech
                     </a>
                   </div>
                 </div>

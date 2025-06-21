@@ -8,7 +8,7 @@ import { Section } from "@/components/layout/section"
 
 export default function ExperienceSection() {
   return (
-    <Section title="Experience Timeline" titleClassName="neon-text-lime">
+    <Section id="experience" title="Experience Timeline" titleClassName="neon-text-lime">
       <div className="relative">
         {/* Timeline line */}
         <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-lime-400 via-cyan-400 to-pink-400 rounded-full"></div>
