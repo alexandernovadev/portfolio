@@ -3,19 +3,11 @@
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Mail, Linkedin } from "lucide-react"
+import { Section } from "@/components/layout/section"
 
 export default function ContactSection() {
   return (
-    <section className="py-20 px-4 max-w-7xl mx-auto">
-      <motion.h2
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="font-orbitron text-4xl md:text-5xl font-bold text-center mb-16 neon-text-pink"
-      >
-        Get In Touch
-      </motion.h2>
-
+    <Section title="Get In Touch" titleClassName="neon-text-pink">
       <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -65,6 +57,6 @@ export default function ContactSection() {
           </Card>
         </motion.div>
       </div>
-    </section>
+    </Section>
   )
 }

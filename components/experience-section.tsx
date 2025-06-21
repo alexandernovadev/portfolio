@@ -3,82 +3,12 @@
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { experiences } from "@/data/experiences"
+import { Section } from "@/components/layout/section"
 
 export default function ExperienceSection() {
-  const experiences = [
-    {
-      company: "FPT",
-      role: "Senior React Developer",
-      period: "2023 - Present",
-      description: "Leading development of enterprise applications using React, Electron, and Azure integration.",
-      techs: ["React", "Electron", "Twilio", "Azure"],
-      achievements: [
-        "Built scalable desktop applications",
-        "Integrated real-time communication features",
-        "Optimized performance by 40%",
-      ],
-    },
-    {
-      company: "Indra",
-      role: "React Native Developer",
-      period: "2022 - 2023",
-      description: "Developed mobile applications with real-time chat functionality and Microsoft AD integration.",
-      techs: ["React Native", "Real-time Chat", "Microsoft AD"],
-      achievements: [
-        "Delivered cross-platform mobile apps",
-        "Implemented secure authentication",
-        "Enhanced user engagement by 60%",
-      ],
-    },
-    {
-      company: "TINET",
-      role: "Frontend Developer",
-      period: "2021 - 2022",
-      description: "Created modern web applications using Next.js, Tailwind CSS, and Storybook.",
-      techs: ["Next.js", "Tailwind", "Storybook"],
-      achievements: ["Built component library", "Improved development workflow", "Reduced build time by 50%"],
-    },
-    {
-      company: "Neoris",
-      role: "Frontend Developer",
-      period: "2020 - 2021",
-      description: "Developed BBVA UI components with GraphQL integration and Jenkins CI/CD.",
-      techs: ["React", "GraphQL", "Jenkins"],
-      achievements: [
-        "Created reusable UI components",
-        "Implemented automated testing",
-        "Streamlined deployment process",
-      ],
-    },
-    {
-      company: "LookApp",
-      role: "Fullstack Developer",
-      period: "2019 - 2020",
-      description: "Built full-stack applications with AWS cloud services and REST API development.",
-      techs: ["React", "Node.js", "AWS", "REST API"],
-      achievements: ["Architected scalable backend", "Deployed cloud infrastructure", "Improved system reliability"],
-    },
-    {
-      company: "eLearning Solutions",
-      role: "Full Stack Developer",
-      period: "2017 - 2019",
-      description: "Developed educational platforms using Vue.js, Node.js, and optimized SQL databases.",
-      techs: ["Vue.js", "Node.js", "SQL"],
-      achievements: ["Built learning management system", "Optimized database queries", "Enhanced user experience"],
-    },
-  ]
-
   return (
-    <section className="py-20 px-4 max-w-7xl mx-auto">
-      <motion.h2
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="font-orbitron text-4xl md:text-5xl font-bold text-center mb-16 neon-text-lime"
-      >
-        Experience Timeline
-      </motion.h2>
-
+    <Section title="Experience Timeline" titleClassName="neon-text-lime">
       <div className="relative">
         {/* Timeline line */}
         <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-gradient-to-b from-lime-400 via-cyan-400 to-pink-400 rounded-full"></div>
@@ -132,6 +62,6 @@ export default function ExperienceSection() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   )
 }

@@ -3,32 +3,10 @@
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Code, Server, Cloud, TestTube } from "lucide-react"
+import { techStacks } from "@/data/tech-stack"
+import { Section } from "@/components/layout/section"
 
 export default function TechStackSection() {
-  const techStacks = {
-    frontend: {
-      icon: Code,
-      color: "lime",
-      techs: ["React", "React Native", "Redux", "GraphQL", "MUI", "Tailwind", "CSS Native", "Figma"],
-    },
-    backend: {
-      icon: Server,
-      color: "cyan",
-      techs: ["Node.js", "REST API", "MongoDB", "PostgreSQL", "Redis", "ElectronJS"],
-    },
-    devops: {
-      icon: Cloud,
-      color: "pink",
-      techs: ["AWS", "Azure", "CI/CD", "Vite", "Docker"],
-    },
-    testing: {
-      icon: TestTube,
-      color: "lime",
-      techs: ["Jest", "React Test", "Unit Test"],
-    },
-  }
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -45,16 +23,7 @@ export default function TechStackSection() {
   }
 
   return (
-    <section className="py-20 px-4 max-w-7xl mx-auto">
-      <motion.h2
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="font-orbitron text-4xl md:text-5xl font-bold text-center mb-16 neon-text-pink"
-      >
-        Tech Stack
-      </motion.h2>
-
+    <Section title="Tech Stack" titleClassName="neon-text-pink">
       <Tabs defaultValue="frontend" className="w-full">
         <TabsList className="grid w-full grid-cols-4 mb-8 bg-transparent border border-gray-700">
           <TabsTrigger value="frontend" className="neon-button-lime data-[state=active]:neon-button-lime">
@@ -96,6 +65,6 @@ export default function TechStackSection() {
           </TabsContent>
         ))}
       </Tabs>
-    </section>
+    </Section>
   )
 }

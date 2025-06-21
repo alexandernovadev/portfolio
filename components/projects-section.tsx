@@ -4,59 +4,10 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Github, ExternalLink } from "lucide-react"
+import { projects } from "@/data/projects"
+import { Section } from "@/components/layout/section"
 
 export default function ProjectsSection() {
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description:
-        "Full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include real-time inventory, payment processing, and admin dashboard.",
-      techs: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Real-Time Chat App",
-      description:
-        "Scalable chat application built with React Native and Socket.io. Supports group chats, file sharing, and push notifications.",
-      techs: ["React Native", "Socket.io", "MongoDB", "AWS"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Task Management System",
-      description:
-        "Collaborative project management tool with drag-and-drop interface, team collaboration features, and advanced analytics.",
-      techs: ["Next.js", "GraphQL", "Prisma", "Tailwind"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "AI-Powered Analytics Dashboard",
-      description:
-        "Business intelligence dashboard with machine learning insights, real-time data visualization, and predictive analytics.",
-      techs: ["React", "Python", "TensorFlow", "D3.js"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Cryptocurrency Tracker",
-      description:
-        "Real-time crypto portfolio tracker with price alerts, market analysis, and trading recommendations.",
-      techs: ["Vue.js", "Node.js", "Redis", "WebSocket"],
-      github: "#",
-      demo: "#",
-    },
-    {
-      title: "Learning Management System",
-      description:
-        "Educational platform with video streaming, interactive quizzes, progress tracking, and certification system.",
-      techs: ["React", "Express", "MongoDB", "AWS S3"],
-      github: "#",
-      demo: "#",
-    },
-  ]
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -73,16 +24,7 @@ export default function ProjectsSection() {
   }
 
   return (
-    <section className="py-20 px-4 max-w-7xl mx-auto">
-      <motion.h2
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="font-orbitron text-4xl md:text-5xl font-bold text-center mb-16 neon-text-cyan"
-      >
-        Featured Projects
-      </motion.h2>
-
+    <Section title="Featured Projects" titleClassName="neon-text-cyan">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -129,6 +71,6 @@ export default function ProjectsSection() {
           </motion.div>
         ))}
       </motion.div>
-    </section>
+    </Section>
   )
 }
