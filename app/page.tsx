@@ -9,6 +9,7 @@ import ProjectsSection from "@/components/projects-section"
 import ContactSection from "@/components/contact-section"
 import AnimatedBackground from "@/components/animated-background"
 import CursorGlow from "@/components/cursor-glow"
+import Footer from "@/components/footer"
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
           <ProjectsSection />
           <ContactSection />
         </div>
+        <Footer />
       </motion.div>
     </div>
   )
