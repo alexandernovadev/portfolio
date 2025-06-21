@@ -1,35 +1,10 @@
 "use client"
 
-import type React from "react"
-
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, Linkedin, Send } from "lucide-react"
-import { useState } from "react"
+import { Mail, Linkedin } from "lucide-react"
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
-
   return (
     <section className="py-20 px-4 max-w-7xl mx-auto">
       <motion.h2
@@ -41,7 +16,7 @@ export default function ContactSection() {
         Get In Touch
       </motion.h2>
 
-      <div className="grid md:grid-cols-2 gap-12">
+      <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -86,58 +61,6 @@ export default function ContactSection() {
                   </div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <Card className="neon-card">
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <Input
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="neon-input"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <Input
-                    name="email"
-                    type="email"
-                    placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="neon-input"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <Textarea
-                    name="message"
-                    placeholder="Your Message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="neon-input min-h-[120px]"
-                    required
-                  />
-                </div>
-
-                <Button type="submit" className="neon-button-lime w-full">
-                  <Send className="h-5 w-5 mr-2" />
-                  Send Message
-                </Button>
-              </form>
             </CardContent>
           </Card>
         </motion.div>

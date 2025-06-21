@@ -96,7 +96,7 @@ export default function ExperienceSection() {
               {/* Timeline dot */}
               <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-lime-400 rounded-full border-4 border-[#0D0D0D] neon-glow-lime z-10"></div>
 
-              <div className={`w-full md:w-5/12 ml-12 md:ml-0 ${index % 2 === 0 ? "md:pr-8" : "md:pl-8"}`}>
+              <div className={`w-full md:w-[45%] ml-12 md:ml-0 ${index % 2 === 0 ? "md:pr-4" : "md:pl-4"}`}>
                 <Card className="neon-card">
                   <CardContent className="p-6">
                     <div className="flex justify-between items-start mb-3">

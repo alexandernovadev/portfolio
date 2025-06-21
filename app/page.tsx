@@ -23,11 +23,13 @@ export default function Home() {
         className="relative z-10"
       >
         <HeroSection />
-        <AboutSection />
-        <TechStackSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <ContactSection />
+        <div className="perro max-w-screen-lg mx-auto px-4">
+          <AboutSection />
+          <TechStackSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <ContactSection />
+        </div>
       </motion.div>
     </div>
   )
